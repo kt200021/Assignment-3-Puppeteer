@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Quick Assignment - 10 June</title>
+</head>
+
+<body>
+    <!-- Home Section -->
+    <section id="home">
+        <!-- Left side bar containig item list -->
+        <div class="list">
+            <!-- Here the code will come from index.js -->
+        </div>
+
+        <!-- Image and below text -->
+        <div style="text-align: center;" class="image">
+            <img src="" alt="">
+            <p>Cat.jpeg</p>
+        </div>
+    </section>
+    <script type="module" src="index1.js"></script>
+
+    <script type="module">
+        // import images from './images.js'
+        window.addEventListener('load', () => {
+            // import images from './images.js'
+            // console.log('hello 1')
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const params = Object.fromEntries(urlSearchParams.entries());
+            if (params.pdf) {
+                import('./index2.js').then((file) => {
+                    // console.log(file)
+                    file.default();
+                })
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
